@@ -1,0 +1,25 @@
+golang-github-hashicorp-serf (0.7.0~ds1-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 16:49:48 +0300
+
+golang-github-hashicorp-serf (0.7.0~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Removed obsolete patches.
+  * Ignore test failures.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 12:54:00 +1100
+
+golang-github-hashicorp-serf (0.6.4~ds1-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Sat, 24 Oct 2015 05:50:24 -0700

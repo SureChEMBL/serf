@@ -1,0 +1,66 @@
+Source: golang-github-hashicorp-serf
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tianon Gravi <tianon@debian.org>, Tim Potter <tpot@hpe.com>
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-github-armon-circbuf-dev,
+               golang-github-armon-go-metrics-dev,
+               golang-github-hashicorp-go-msgpack-dev,
+               golang-github-hashicorp-go-syslog-dev,
+               golang-github-hashicorp-logutils-dev,
+               golang-github-hashicorp-mdns-dev,
+               golang-github-hashicorp-memberlist-dev,
+               golang-github-mitchellh-cli-dev,
+               golang-github-mitchellh-mapstructure-dev,
+               golang-github-ryanuber-columnize-dev,
+               golang-any
+Standards-Version: 3.9.6
+Homepage: https://www.serfdom.io
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-hashicorp-serf.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-hashicorp-serf.git
+XS-Go-Import-Path: github.com/hashicorp/serf
+
+Package: serf
+Architecture: any
+Depends: adduser, ${misc:Depends}, ${shlibs:Depends}
+Description: Service orchestration and management tool
+ Serf is a decentralized solution for service discovery and orchestration that
+ is lightweight, highly available, and fault tolerant.
+ .
+ Serf runs on Linux, Mac OS X, and Windows. An efficient and lightweight gossip
+ protocol is used to communicate with other nodes. Serf can detect node failures
+ and notify the rest of the cluster. An event system is built on top of Serf,
+ letting you use Serf's gossip protocol to propagate events such as deploys,
+ configuration changes, etc. Serf is completely masterless with no single point
+ of failure.
+ .
+ This package contains the tool/service.
+
+Package: golang-github-hashicorp-serf-dev
+Architecture: all
+Depends: golang-github-armon-circbuf-dev,
+         golang-github-armon-go-metrics-dev,
+         golang-github-hashicorp-go-msgpack-dev,
+         golang-github-hashicorp-go-syslog-dev,
+         golang-github-hashicorp-logutils-dev,
+         golang-github-hashicorp-mdns-dev,
+         golang-github-hashicorp-memberlist-dev,
+         golang-github-mitchellh-cli-dev,
+         golang-github-mitchellh-mapstructure-dev,
+         golang-github-ryanuber-columnize-dev,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Service orchestration and management tool (source)
+ Serf is a decentralized solution for service discovery and orchestration that
+ is lightweight, highly available, and fault tolerant.
+ .
+ Serf runs on Linux, Mac OS X, and Windows. An efficient and lightweight gossip
+ protocol is used to communicate with other nodes. Serf can detect node failures
+ and notify the rest of the cluster. An event system is built on top of Serf,
+ letting you use Serf's gossip protocol to propagate events such as deploys,
+ configuration changes, etc. Serf is completely masterless with no single point
+ of failure.
+ .
+ This package contains the source.

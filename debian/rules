@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)
+
+override_dh_auto_test:
+	# some of upstream's tests don't tear down listening sockets properly yet
+	-go list github.com/hashicorp/serf/... | xargs -n1 go test -v
+	# TODO some tests are a little racey -- it'd be good to figure out why
+
+%:
+	dh $@ --buildsystem=golang --with=golang
